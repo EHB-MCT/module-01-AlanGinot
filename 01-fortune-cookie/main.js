@@ -10,12 +10,22 @@ const fortunes = [
     "Change is happening in your life, so commit often!",
     "You will inherit a large sum of money and an undocumented codebase",
     "Your hard work will pay off soon(-ish).",
-    "The best is yet to come. A semester of Javascript awaits you."
+    "The best is yet to come. A semester of Javascript awaits you.",
+    "My Heart......I loved her............. WAAAAAAAAAA "
 ];
 
 // 1. Select Elements
 let display = document.querySelector("#fortune-display");
 let button = document.querySelector("#cookie-btn");
+console.log("#cookie-btn");
+console.log("#fortune-display");
+button.addEventListener('click',myfunction);
+function myfunction()
+{
+
+    display.innerText = fortunes[ Math.floor(Math.random()*fortunes.length)];
+}
+
 
 // 2. Add event Listener
 //      generate a random index
