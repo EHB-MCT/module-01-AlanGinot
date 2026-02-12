@@ -19,6 +19,7 @@ text.innerText=textNL;
 //3. Select buttons
 let nlButton = document.querySelector("#btn-nl");
 let frButton = document.querySelector("#btn-fr");
+nlButton.disabled =true;
 //4. Add event listeners
 nlButton.addEventListener('click',NLTEXT);
 frButton.addEventListener('click',FRTEXT);
@@ -27,15 +28,21 @@ function NLTEXT()
 title.innerText =titleNL;
 subtitle.innerText =subtitleNL;
 text.innerText=textNL;
+nlButton.disabled =true;
+frButton.disabled= false;
 }
 function FRTEXT()
 {
 title.innerText =titleFR;
 subtitle.innerText =subtitleFR;
 text.innerText=textFR;
+nlButton.disabled =false;
+frButton.disabled= true;
 }
 //5. Create, configure and append image
+let imgPlace =document.querySelector("#applePic");
 let img= document.createElement("img");
 img.src ="appel.jpg";
-document.body.appendChild(img);
+img.width =500;
+
 
